@@ -15,8 +15,8 @@
 |birth_month|integer|null: false|
 |birth_day|integer|null: false|
 ### Association
-- has_many :user_exhibition
-- has_many :purchase
+- has_many :user_exhibitions through: :exhibitions
+- has_many :purchases through: :exhibitions
 
 
 ## addressテーブル
@@ -53,7 +53,7 @@
 |exhibitions_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
-- has_many :exhibition
+- has_many :exhibitions
 
 
 ## imagesテーブル
@@ -62,7 +62,7 @@
 |exhibitions_id|integer|null: false, foreign_key: true|
 |image|string|null: false|
 ### Association
-- belongs_to :exhibition
+- belongs_to :exhibitions
 
 
 ## exhibitionsテーブル
@@ -79,7 +79,7 @@
 |goods_name|string|null: false|
 |goods_ demonstrate|string|null: false|
 ### Association
-- has_many :image
+- has_many :images
 - belongs_to :user_exhibition
 - belongs_to :category
 
@@ -91,7 +91,7 @@
 ### Association
 - belongs_to :exhibition
 
-## categorysテーブル
+## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |path|integer|null: false|
@@ -105,5 +105,5 @@
 |brand_id|integer|null: false|
 |brand_name|string|null: false|
 ### Association
-- has_many :category
+- has_many :categorys
 
