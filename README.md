@@ -48,7 +48,7 @@
 |exhibitions_id|integer|null: false, foreign_key: true|
 |image|string|null: false|
 ### Association
-- belongs_to :exhibitions
+- belongs_to :exhibition
 
 
 ## exhibitionsテーブル
@@ -84,12 +84,12 @@
 |path|integer|null: false|
 |item|string|null: false|
 ### Association
-- belongs_to :exhibition
+- has_many :exhibitions
 
 ## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |brand_name|string|null: false|
 ### Association
-- belongs_to :exhibition
+- has_many :exhibitions
 
