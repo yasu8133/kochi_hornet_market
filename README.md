@@ -13,8 +13,9 @@
 |kana_last_name|string|null: false|
 |birth|date|null: false|
 ### Association
-- has_many :user_exhibitions through: :exhibitions
-- has_many :purchases through: :exhibitions
+- has_many :exhibitions
+- has_one :address
+- has_one :payment
 
 
 ## addressテーブル
@@ -64,8 +65,10 @@
 |goods_demonstrate|string|null: false|
 ### Association
 - has_many :images
-- belongs_to :user_exhibition
+- belongs_to :user
 - belongs_to :category
+- belongs_to :brand
+- has_one :purchase
 
 ## purchasesテーブル
 |Column|Type|Options|
@@ -81,12 +84,12 @@
 |path|integer|null: false|
 |item|string|null: false|
 ### Association
-- belongs_to :brand
+- belongs_to :exhibition
 
 ## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |brand_name|string|null: false|
 ### Association
-- has_many :categories
+- belongs_to :exhibition
 
