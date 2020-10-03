@@ -11,9 +11,7 @@
 |password|string|null: false|
 |kana_family_name|string|null: false|
 |kana_last_name|string|null: false|
-|birth_year|integer|null: false|
-|birth_month|integer|null: false|
-|birth_day|integer|null: false|
+|birth|date|null: false|
 ### Association
 - has_many :user_exhibitions through: :exhibitions
 - has_many :purchases through: :exhibitions
@@ -22,8 +20,8 @@
 ## addressテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false|
-|Postal_code|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|postal_code|string|null: false|
 |prefectures|string|null: false|
 |municipalities|string|null: false|
 |address|string|null: false|
@@ -36,24 +34,11 @@
 ## paymentテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|
-|image|string|
-|card_number|integer|null: false|
-|year|integer|null: false|
-|month|integer|null: false|
-|security_number|integer|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|customer_id|string|
+|card_id|string|
 ### Association
 - belongs_to :user
-
-
-## user_exhibitionsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|exhibitions_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :group
-- has_many :exhibitions
 
 
 ## imagesテーブル
@@ -69,15 +54,14 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|categorys_id|integer|null: false|
-|brands_id|integer|null: false|
+|category_id|integer|null: false, foreign_key: true|
 |shipping_charges|string|null: false|
 |shipping_area|string|null: false|
 |shipping_date|string|null: false|
 |price|integer|null: false|
-|goods_ status|string|null: false|
+|goods_status|string|null: false|
 |goods_name|string|null: false|
-|goods_ demonstrate|string|null: false|
+|goods_demonstrate|string|null: false|
 ### Association
 - has_many :images
 - belongs_to :user_exhibition
@@ -102,8 +86,7 @@
 ## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|brand_id|integer|null: false|
 |brand_name|string|null: false|
 ### Association
-- has_many :categorys
+- has_many :categories
 
