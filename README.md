@@ -8,7 +8,6 @@
 |password|string|null: false|
 |family_name|string|null: false|
 |last_name|string|null: false|
-|password|string|null: false|
 |kana_family_name|string|null: false|
 |kana_last_name|string|null: false|
 |birth|date|null: false|
