@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+.banner {
+  background-image: url(bg-appBanner-pict.jpg);
+  padding: 100px 40px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  .content {
+    color: #fff;
+    text-align: center;
+    &__title {
+      text-shadow: 0 0 5px rgba(0,0,0,0.4);
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+    &__text {
+      font-size: 35px;
+      text-shadow: 0 0 5 rgba(0,0,0,0.4);
+    }
+    &__icon {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 20px auto 0;
+      .apple {
+        margin-right: 10px;
+        width: 180px;
+        vertical-align: bottom;
+        text-decoration: underline;
+      }
+      .google {
+        width: 180px;
+        vertical-align: bottom;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: underline;
+      }
+    }
+  }
+}
