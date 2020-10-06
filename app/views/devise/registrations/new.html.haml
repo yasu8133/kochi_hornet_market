@@ -9,15 +9,15 @@
         新規会員登録
       .Account__inner
         .Account__content 
-          ・ニックネーム
+          ・ニックネーム（必須）
           = form_with url: "#" do |f|
             = f.text_field :name, class: "name"
         .Account__content
-          ・メールアドレス
+          ・メールアドレス（必須）
           = form_with url: "#" do |f|
             = f.text_field :email, class: "mail"
         .Account__content
-          ・パスワード
+          ・パスワード    （必須）
           = form_with url: "#" do |f|
             = f.text_field :password, class: "pass"
         .Account__signin
@@ -26,13 +26,19 @@
           %label.female 女性
           %input.radioname{:type => "radio", :name => "sex", :checked => "checked"}
           %label.male 男性
-        .Account__content-name
-          %p ・お名前
-          = form_with url: "#" do |f|
-            = f.text_field :name, class: "fname", placeholder: "性"
-          = form_with url: "#" do |f|
-            = f.text_field :name, class: "lname", placeholder: "名前"
-        .Account__birth ・生年月日
+        .Account__content-name 
+          %p・お名前（必須）
+          .Account__content-fname 
+            = form_with url: "#" do |f|
+              = f.text_field :name, class: "fname", placeholder: "性"
+            = form_with url: "#" do |f|
+              = f.text_field :name, class: "fkana", placeholder: "かな"
+          .Account__content-lname
+            = form_with url: "#" do |f|
+              = f.text_field :name, class: "lname", placeholder: "名前"
+            = form_with url: "#" do |f|
+              = f.text_field :name, class: "lkana", placeholder: "かな"
+        .Account__birth ・生年月日（必須）
         %select{:name => "year", :class => "year"}>
           %option{:value => ""} -
           %option{:value => "1951"} 1951
@@ -155,6 +161,9 @@
           %option{:value => "30"} 30
           %option{:value => "31"} 31
         日
+        .actions
+          = form_with url: "#" do |f|
+            = f.submit "登録", class: 'Button-UserButton'
         .Account__form-group
           %p.info
             登録することで、利用規約とプライバシーポリシーに同意したものとみなされます。

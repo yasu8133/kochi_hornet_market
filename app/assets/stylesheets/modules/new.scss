@@ -61,25 +61,38 @@
     position: relative;
     display: block;
     margin-left: 140px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     .radioname {
       vertical-align: middle;
       margin-left: 28px;
     }
   }
-  .Account__content-name {
-    max-width: 343px;
-    margin: 0 auto;
-    .fname {
-      width: 50%;
-      line-height: 35px;
-      margin-bottom: 15px;
+  .Account__content-name  {
+        max-width: 343px;
+        margin: 0 auto;
+    .Account__content-fname {
+      display: flex;
+      .fname {
+        line-height: 35px;
+        margin-bottom: 15px;
+        margin-right: 10px;
+      }
+      .fkana {
+        line-height: 35px;
+      }
     }
-    .lname {
-      width: 50%;
-      line-height: 35px;
+    .Account__content-lname {
+      display: flex;
+      .lname {
+        line-height: 35px;
+        margin-bottom: 15px;
+        margin-right: 10px;
+      }
+      .lkana {
+        line-height: 35px;
+      }
     }
-  }
+ }
   .Account__birth {
     position: relative;
     display: block;
@@ -97,6 +110,17 @@
   .day {
     height: 35px;
     margin-left: 10px;
+  }
+  .Button-UserButton {
+    margin-left: 180px;
+    line-height: 35px;
+    margin-top: 30px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #6ff0e5;
+    border: none;
+    width: 300px;
+    cursor: pointer;
   }
   .Account__form-group {
     margin: 40px 0 0;
