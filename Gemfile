@@ -64,3 +64,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'unicorn'
 end
+
+
+gem "haml-rails", ">= 1.0", '<= 2.0.1'
+gem 'font-awesome-sass'
+
+
+# ActiveRecordモデルのレコードをツリー構造（階層）として編成することを可能にするGem
+gem 'ancestry'
+
