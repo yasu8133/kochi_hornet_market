@@ -35,7 +35,6 @@
 ## paymentテーブル
 |Column|Type|Options|
 |------|----|-------|
-<!-- リファレンス型に修正 -->
 |user_id|references|null: false, foreign_key: true|
 
 <!-- _idは、外部キーを利用すると決めているチームも多いため、_tokenと管理する方がすっきりしている -->
@@ -56,13 +55,12 @@
 - belongs_to :exhibition
 
 
+<!-- 出品された商品のテーブル -->
 ## exhibitionsテーブル
 |Column|Type|Options|
 |------|----|-------|
-<!-- リファレンス型に修正,外部キーを使用するため -->
 |user_id|references|null: false, foreign_key: true|
 |category_id|references|null: false, foreign_key: true|
-
 |shipping_charges|string|null: false|
 |shipping_area|string|null: false|
 |shipping_date|string|null: false|
@@ -80,7 +78,6 @@
 ## purchasesテーブル
 |Column|Type|Options|
 |------|----|-------|
-<!-- リファレンス型に修正,外部キーを使用するため -->
 |user_id|references|null: false, foreign_key: true|
 |exhibitions_id|references|null: false, foreign_key: true|
 ### Association
@@ -100,6 +97,3 @@
 |brand_name|string|null: false|
 ### Association
 - has_many :exhibitions
-
-<!-- 困った -->
-
