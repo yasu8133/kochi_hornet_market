@@ -70,6 +70,10 @@
                 width: 560px;
                 align-items: center;
                 margin: 0 auto;
+                .itemImg1 {
+                  width: 100%;
+                  height: auto;
+                }
                 .details {
                   display: flex;
                   justify-content: center;
@@ -77,8 +81,9 @@
                   .detail {
                     width: 25%;
                     margin: 0 10px 0 0;
-                    .itemImg {
+                    .itemImg2 {
                       width: 100%;
+                      height: auto;
                       vertical-align: bottom;
                     }
                   }
