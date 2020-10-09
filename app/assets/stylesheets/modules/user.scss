@@ -3,6 +3,9 @@
   .single__header {
     height: 128px;
     text-align: center;
+    .logotag {
+      width: 300px;
+    }
   }
   .single__main {
     display: block;
@@ -84,7 +87,7 @@
       }
     }
     .furimafooter {
-      vertical-align: middle;
+      width: 250px;
       color: gray;
     }
   }
