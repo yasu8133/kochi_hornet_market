@@ -31,7 +31,6 @@
 ### Association
 - belongs_to :user
 
-
 ## paymentテーブル
 |Column|Type|Options|
 |------|----|-------|

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
   root 'items#index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  # 出品機能実装のための仮置きです
+  resources :exhibitions, except: :show
 end

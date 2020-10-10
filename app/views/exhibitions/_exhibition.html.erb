@@ -1,0 +1,13 @@
+<div class="content">
+
+  <p><%= exhibition.price %>販売価格</p>
+  <p><%= exhibition.goods_name %>商品名</p>
+  <p><%= exhibition.goods_demonstrate %>商品の説明</p>
+
+<%# テーブル作成時に、user_id、category_idを追加すること %>
+
+  <% exhibition.images.each do |image| %>
+    <%# カラム名imageに合わせる %>
+    <%= image_tag image.image.url %>
+  <% end %>
+</div>

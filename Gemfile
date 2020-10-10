@@ -56,7 +56,6 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
@@ -72,3 +71,9 @@ gem 'font-awesome-sass'
 # ActiveRecordモデルのレコードをツリー構造（階層）として編成することを可能にするGem
 gem 'ancestry'
 
+# 画像アップロードのためのGEM
+gem 'carrierwave'
+gem 'mini_magick'
+
+# 都道府県など、固定値を入れるためのGEM
+gem 'active_hash'
