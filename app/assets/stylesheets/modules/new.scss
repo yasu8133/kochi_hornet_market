@@ -148,20 +148,18 @@
     text-align: center;
     color: grey;
     width: 456px;
-    .crearfix {
-      margin-bottom: 20px;
-    }
-    li {
+    .clearfix {
       font-size: 12px;
-      display: inline-block;
-      margin-right: 15px;
+      list-style: none;
+      margin-bottom: 20px;
+      li {
+        margin-right: 10px;
+        display: inline-block;
+      }
     }
-    .furimafooterlogo1 {
-      width: 280px;
-      vertical-align: middle;
-    }
-    .hornet {
-      font-size: small;
+    .furimafooter {
+      width: 250px;
+      color: gray;
     }
   }
 }

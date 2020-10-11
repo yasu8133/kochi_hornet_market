@@ -168,12 +168,4 @@
           %p.info
             登録することで、利用規約とプライバシーポリシーに同意したものとみなされます。
   %footer.footer-honet
-    %nav
-      %ul.crearfix
-        %li プライバシーポリシー
-        %li フリマ利用規約
-        %li 特定商取引に関する表記
-      %h2
-        = link_to image_tag('logo-white.png', :class => "furimafooterlogo1")
-      %p.hornet
-        ©Kochi_hornet_market
+    = render 'layouts/footer'
