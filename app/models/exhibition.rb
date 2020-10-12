@@ -12,6 +12,11 @@ class Exhibition < ApplicationRecord
     greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999,
     message: "¥300〜¥9999999の間で入力してください"
   }
+  # アソシエーションを組むこと
+  # accepts_nested_attributes_for :item_images, allow_destroy: true
+  # accepts_nested_attributes_for :item_images
+  # validate  :image
+
 
   extend ActiveHash::Associations::ActiveRecordExtensions
     has_many :images
@@ -40,11 +45,10 @@ class Exhibition < ApplicationRecord
       "4~7日で発送": 3
     }
 
-    # 商品の状態を追加
     enum goods_status: {
       "新品、未使用": 1,
-      "目立った傷や汚れなし": 2,
-      "4~7日で発送": 3,
+      "未使用に近い": 2,
+      "目立った傷や汚れなし": 3,
       "やや傷や汚れあり": 4,
       "傷や汚れあり": 5,
       "全体的に状態が悪い": 6
