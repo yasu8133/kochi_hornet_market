@@ -3,7 +3,7 @@
   発送元の地域<%= f.select :shipping_area, Prefecture.all.map { |pre| [pre.name, pre.id] } %><br>
   発送までの日数<%= f.select :shipping_date, Exhibition.shipping_dates.keys, include_blank: true %><br>
   販売価格<%= f.number_field :price %><br>
-  商品の状態<%= f.select :goods_status, Exhibition.goods_status.keys, include_blank: true%><br>
+  商品の状態<%= f.select :goods_status, Exhibition.goods_statuses.keys, include_blank: true%><br>
   商品名<%= f.text_field :goods_name %><br>
   商品の説明<%= f.text_field :goods_demonstrate %><br>
 
