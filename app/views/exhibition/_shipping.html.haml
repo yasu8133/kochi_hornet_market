@@ -4,7 +4,7 @@
   %h2.charge
     配送料の負担
     %span.require 必須
-    %select{:name => "budget_d"}
+    %select.chargeSelect{:name => "budget_d"}
       %option{:value => "0"} 選択してください
       %option{:value => "1"} 送料込み（出品者負担）
       %option{:value => "2"} 着払い（購入者負担）
@@ -12,7 +12,7 @@
   %h2.area
     発送元の地域
     %span.require 必須
-    %select{:name => "budget_d"}
+    %select.areaSelect{:name => "budget_d"}
       %option{:value => "0"} 選択してください
       %option{:value => "1"} 北海道
       %option{:value => "2"} 高知
@@ -21,7 +21,7 @@
   %h2.day
     発送までの日数
     %span.require 必須
-    %select{:name => "budget_d"}
+    %select.daySelect{:name => "budget_d"}
       %option{:value => "0"} 選択してください
       %option{:value => "1"} 1~2日で発送
       %option{:value => "2"} 3~4日で発送

@@ -13,7 +13,7 @@
                 = f.fields_for :images do |i|
                   .input-area
                     = i.file_field :image, type: 'file', name: "item[images_attributes][][image_url]", value:"", style: "display:none", id:"img-file"
-                    %label{for: "img-file"}
+                    %label.upperIcon{for: "img-file"}
                       %i.fas.fa-camera
-                        .dragDropText ドラッグアンドドロップ
-                        %br またはクリックしてファイルをダウンロード
+                      .dragDropText ドラッグアンドドロップ
+                      %br またはクリックしてファイルをダウンロード

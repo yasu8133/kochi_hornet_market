@@ -4,7 +4,7 @@
   %h2.category
     カテゴリー
     %span.require 必須
-    %select{:name => "budget_d"}
+    %select.categorySelect{:name => "budget_d"}
       %option{:value => "0"} 選択してください
       %option{:value => "1"} レディース
       %option{:value => "2"} メンズ
@@ -16,14 +16,14 @@
 
   %h2.brand
     ブランド
-    %span.requireSub 任意
+    %span.brandInput 任意
     = form_with(url: "#", local: true, method: :get, class: "form") do |f|
-      = f.text_field :keyword, class: "input", placeholder: "例）シャネル"
+      = f.text_field :keyword, class: "brandInputText", placeholder: "例）シャネル"
 
   %h2.condition
     商品の状態
     %span.require 必須
-    %select{:name => "budget_d"}
+    %select.conditionSelect{:name => "budget_d"}
       %option{:value => "0"}  選択してください
       %option{:value => "1"}  未使用に近い
       %option{:value => "2"}  目立った傷や汚れなし
