@@ -101,5 +101,4 @@
 ### Association
 - has_many :exhibitions
 
-<!-- 困った -->
 
