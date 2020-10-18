@@ -1,1 +1,21 @@
-商品詳細
+.prodactInfo
+  %h2.detail
+    商品の詳細
+  %h2.category
+    カテゴリー
+    %span.require 必須
+  %h2.select1__area
+    選択してください
+  %h2.brand
+    ブランド
+    %span.requireSub 任意
+    = form_with(url: "#", local: true, method: :get, class: "form") do |f|
+      = f.text_field :keyword, class: "input", placeholder: "例）シャネル"
+
+  %h2.select2__area
+    例）シャネル
+  %h2.condition
+    商品の状態
+    %span.require 必須
+  %h2.select3__area
+    選択してください
