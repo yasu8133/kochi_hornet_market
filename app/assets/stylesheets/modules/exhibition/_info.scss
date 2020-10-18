@@ -3,8 +3,7 @@
 }
 
 .prodactInfo{
-  // display: flex;
-  // justify-content: center;
+  background-color: #ffffff;
   align-items: center;
   width: 700px;
   height: 300px;
@@ -12,12 +11,15 @@
   margin:0 auto;
 
   .detail{
-    background-color: red;
+    color: #888888;
+    background-color: #ffffff;
     font-weight: bold;
+    margin-bottom: 24px;
   }
   .category{
-    background-color: royalblue;
+    background-color: #ffffff;
   }
+
   .require{
     font-weight: bold;
     color: #ffffff;
@@ -36,26 +38,12 @@
   }
   
 
-  .select1__area{
-    background-color: salmon;
-    font: bold;
-  }
 
   .brand{
-    background-color: blueviolet;
-  }
-
-  .select2__area{
-    background-color: brown;
+    background-color: #ffffff;
   }
 
   .condition{
-    background-color: cadetblue;
+    background-color: #ffffff;
   }
-
-  .select3__area{
-    background-color: chartreuse;
-  }
-
-
 }
