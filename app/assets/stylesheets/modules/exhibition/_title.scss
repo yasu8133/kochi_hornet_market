@@ -5,13 +5,12 @@
 .title{
   background-color: #ffffff;
   width: 700px;
-  height: 300px;
+  height: 416px;
   align-items: center;
   margin:0 auto;
   padding: 40px;
   border-bottom: 2px solid #f5f5f5;
   box-sizing: border-box;
-  padding-bottom: 36px;
 
   .form-group__name{
     .form-group__name__sub{
@@ -19,7 +18,7 @@
       padding-bottom: 36px;
       .require{
         color: #ffffff;
-        background-color: #ff0211;
+        background-color: #3cceac;
         border-radius: 2px;
         margin-left: 8px;
         padding: 0 4px;
@@ -41,7 +40,7 @@
       .require{
         font-weight: bold;
         color: #ffffff;
-        background-color: #ff0211;
+        background-color: #3cceac;
         border-radius: 2px;
         margin-left: 8px;
         padding: 0 4px;
