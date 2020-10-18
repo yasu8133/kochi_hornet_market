@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  width: 700px;
+  height: 300px;
+  padding: 40px;
+  margin:0 auto;
+  color: #333333;
+
+  // 全体にかかってるので、ラベルだけにBoldする
+  font-weight: bold;
+  .require{
+    color: #ffffff;
+    background-color: #ff0211;
+    border-radius: 2px;
+    margin-left: 8px;
+    
+    .form{
+      margin:0 auto;
+    }
+  }
+
+
+}

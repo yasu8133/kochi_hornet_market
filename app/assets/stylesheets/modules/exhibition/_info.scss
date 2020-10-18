@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+.prodactInfo{
+  // display: flex;
+  // justify-content: center;
+  align-items: center;
+  width: 700px;
+  height: 300px;
+  padding: 40px;
+  margin:0 auto;
+
+  .detail{
+    background-color: red;
+    font-weight: bold;
+  }
+  .category{
+    background-color: royalblue;
+  }
+  .require{
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff0211;
+    border-radius: 2px;
+    margin-left: 8px;
+    padding: 0 4px;
+  }
+  .requireSub{
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #bfbfbf;
+    border-radius: 2px;
+    margin-left: 8px;
+    padding: 0 4px;
+  }
+  
+
+  .select1__area{
+    background-color: salmon;
+    font: bold;
+  }
+
+  .brand{
+    background-color: blueviolet;
+  }
+
+  .select2__area{
+    background-color: brown;
+  }
+
+  .condition{
+    background-color: cadetblue;
+  }
+
+  .select3__area{
+    background-color: chartreuse;
+  }
+
+
+}

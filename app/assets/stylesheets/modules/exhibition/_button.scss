@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+// 700*2146
+
+.prodactButton{
+  width: 700px;
+  height: 2146px;
+  background-color: black;
+  color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
