@@ -1,3 +1,21 @@
 * {
   box-sizing: border-box;
 }
+
+.caution{
+  background-color: #ffffff;
+  width: 700px;
+  height: 32px;
+  align-items: center;
+  margin:0 auto;
+
+  .cautionText{
+    color: #333333;
+    width: 620px;
+    height: 32px;
+    align-items: center;
+    margin:0 auto;
+    font-size: small;
+    margin-bottom: 48px;
+  }
+}
