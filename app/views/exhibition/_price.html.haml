@@ -1,13 +1,22 @@
 .price
-  価格（¥300〜999,999,999）
-  %h2.prodactTitle
+  %h2.productTitle
+    価格（¥300〜999,999,999）
+  %h2.priceInput
     販売価格
-    %h2.input1__area
-      0
-  %h2.prodactInfo
+    %span.require 必須
+    %span.yen ¥
+    = form_with(url: "#", local: true, method: :get, class: "form") do |f|
+      = f.number_field :price, class: "priceNumber", min: 0, max: 999999999, size:30
+
+
+  %h2.priceMargin
     販売手数料
-    %h2.input2__area
-      ー
-  %h2.InputError
+  %h2.priceMarginArea
+    -
+
+
+  %h2.priceIncome
     販売利益
-    %h2.input2__area
+  %h2.priceIncomeArea
+    -
+
