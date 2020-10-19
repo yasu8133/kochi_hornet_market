@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+.productButton{
+  background-color: #ffffff;
+  color: black;
+  align-items: center;
+  width: 700px;
+  height: 270px;
+  padding: 40px;
+  margin:0 auto;
+
+  .goButton{
+    display: flex;
+    align-items: center; /* 縦方向中央揃え */
+    justify-content: center; /* 横方向中央揃え */
+    width: 360px;
+    height: 48px;
+    font-size: 17px;
+    margin:0 auto;
+    margin-bottom: 24px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3cceac;
+  }
+
+  .draftButton{
+    display: flex;
+    align-items: center; /* 縦方向中央揃え */
+    justify-content: center; /* 横方向中央揃え */
+    width: 360px;
+    height: 48px;
+    font-size: 17px;
+    margin:0 auto;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #222222;
+    background-color: #cccccc;
+  }
+
+  .returnButton{
+    display: flex;
+    align-items: center; /* 縦方向中央揃え */
+    justify-content: center; /* 横方向中央揃え */
+    width: 360px;
+    height: 20px;
+    font-size: 14px;
+    margin:0 auto;
+    margin-top: 24px;
+    border-radius: 3px;
+    color: #0095ee;
+    background-color: #ffffff;
+  }
+}
