@@ -3,5 +3,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @exhibition = Exhibition.find(1)
   end
+
 end

@@ -72,3 +72,5 @@ gem 'font-awesome-sass'
 # ActiveRecordモデルのレコードをツリー構造（階層）として編成することを可能にするGem
 gem 'ancestry'
 
+gem 'devise'
+
