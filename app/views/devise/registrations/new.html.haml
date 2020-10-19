@@ -8,33 +8,39 @@
         新規会員登録
       .Account__inner
         .Account__content 
-          ・ニックネーム（必須）
+          %span・ニックネーム
+          %span.require（必須）
           = form_with url: "#" do |f|
             = f.text_field :name, class: "name"
         .Account__content
-          ・メールアドレス（必須）
+          %span・メールアドレス
+          %span.require（必須）
           = form_with url: "#" do |f|
             = f.text_field :email, class: "mail"
         .Account__content
-          ・パスワード    （必須）
+          %span・パスワード
+          %span.require（必須）
           = form_with url: "#" do |f|
             = f.text_field :password, class: "pass"
-        .Account__signin
-          .signIn_name ・性別
-          %input.radioname{type: "radio", name: "sex", checked: "checked"}
-          %label.female 女性
-          %input.radioname{type: "radio", name:"sex", checked: "checked"}
-          %label.male 男性
+        -# .Account__signin
+        -#   .signIn_name ・性別
+        -#   %input.radioname{type: "radio", name: "sex", checked: "checked"}
+        -#   %label.female 女性
+        -#   %input.radioname{type: "radio", name:"sex", checked: "checked"}
+        -#   %label.male 男性
         .Account__content-name 
-          %p・お名前（必須）
+          %span・お名前（漢字）
+          %span.require（必須）
           .Account__content-fname 
             = form_with url: "#" do |f|
-              = f.text_field :name, class: "fname", placeholder: "性"
+              = f.text_field :name, class: "fname", placeholder: "姓"
             = form_with url: "#" do |f|
-              = f.text_field :name, class: "fkana", placeholder: "かな"
+              = f.text_field :name, class: "fkana", placeholder: "名前"
+        .Account__content-name-kana
           .Account__content-lname
+            %span・お名前（カナ）
             = form_with url: "#" do |f|
-              = f.text_field :name, class: "lname", placeholder: "名前"
+              = f.text_field :name, class: "lname", placeholder: "例（ヤマダ"
             = form_with url: "#" do |f|
               = f.text_field :name, class: "lkana", placeholder: "かな"
         .Account__birth ・生年月日（必須）

@@ -34,11 +34,20 @@
         max-width: 343px;
         margin: 0 auto;
    }
+   .require{
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3cceac;
+    border-radius: 2px;
+    margin-left: 8px;
+    padding: 0 4px;
+  }
    .name {
     position: relative;
     display: block;
     width: 100%;
     line-height: 35px;
+    margin-top: 5px;
     margin-bottom: 20px;
   }
   .mail {
@@ -47,6 +56,7 @@
     width: 100%;
     line-height: 35px;
     margin-bottom: 20px;
+    margin-top: 5px;
   }
   .pass {
     position: relative;
@@ -54,17 +64,18 @@
     width: 100%;
     line-height: 35px;
     margin-bottom: 20px;
+    margin-top: 5px;
   }
-  .Account__signin {
-    position: relative;
-    display: block;
-    margin-left: 140px;
-    margin-bottom: 25px;
-    .radioname {
-      vertical-align: middle;
-      margin-left: 28px;
-    }
-  }
+  // .Account__signin {
+  //   position: relative;
+  //   display: block;
+  //   margin-left: 140px;
+  //   margin-bottom: 25px;
+  //   .radioname {
+  //     vertical-align: middle;
+  //     margin-left: 28px;
+  //   }
+  // }
   .Account__content-name  {
         max-width: 343px;
         margin: 0 auto;
@@ -74,28 +85,37 @@
         line-height: 35px;
         margin-bottom: 15px;
         margin-right: 10px;
+        margin-top: 5px;
       }
       .fkana {
         line-height: 35px;
+        margin-top: 5px;
       }
     }
+    .Account__content-name-kana {
+      background-color: brown;
+      max-width: 343px;
+      margin: 0 auto;
     .Account__content-lname {
       display: flex;
       .lname {
         line-height: 35px;
         margin-bottom: 15px;
         margin-right: 10px;
+        margin-top: 5px;
       }
       .lkana {
         line-height: 35px;
+        margin-top: 5px;
       }
     }
+  }
  }
   .Account__birth {
     position: relative;
     display: block;
     max-width: 343px;
-    margin: 30px auto 0 auto;
+    margin: 30px auto 5px;
   }
   .year {
     height: 35px;
@@ -109,10 +129,12 @@
     height: 35px;
     margin-left: 10px;
   }
+  .actions{
+    text-align: center;
+  }
   .Button-UserButton {
-    margin-left: 180px;
+    margin: 20px auto 0;
     line-height: 35px;
-    margin-top: 30px;
     border-radius: 4px;
     color: #fff;
     background-color: #6ff0e5;
@@ -123,6 +145,7 @@
   .Account__form-group {
     margin: 40px 0 0;
     .info {
+      text-align: center;
       margin: 0;
       padding: 0;
       line-height: 1.5;
