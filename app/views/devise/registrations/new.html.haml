@@ -2,7 +2,6 @@
   .AccountPage__header
     %h1
       = link_to image_tag 'logo.png', href: "#", class: 'logotag'
-
 = form_with model: @user, url: user_registration_path, local: true do |f|
   .AccountPage__main
     .AccountPage__container
@@ -10,9 +9,9 @@
         新規会員登録
       .Account__inner
         .Account__content 
-          %span・メールアドレス
+          %span・ニックネーム
           %span.require（必須）
-          = f.text_field :nickname, class: "name"
+          = f.text_field :nickname, class: "nickname"
         .Account__content
           %span・メールアドレス
           %span.require（必須）
@@ -21,7 +20,7 @@
           %apan・パスワード 
           %span.require（必須）
           = f.password_field :password, class: "pass"
-        .Account__content-name 
+        .Account__content
           %span・お名前
           %span.require（必須）
           .Account__content-fname 
