@@ -14,10 +14,12 @@
           %span.require（必須）
           = f.text_field :nickname, class: "name"
         .Account__content
-          ・メールアドレス（必須）
+          %span・メールアドレス
+          %span.require（必須）
           = f.email_field :email, class: "mail"
         .Account__content
-          ・パスワード    （必須）
+          %apsn・パスワード 
+          %span.require（必須）
           = f.password_field :password, class: "pass"
         .Account__signin
           -# .signIn_name ・性別
