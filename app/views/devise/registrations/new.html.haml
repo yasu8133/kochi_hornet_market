@@ -10,7 +10,8 @@
         新規会員登録
       .Account__inner
         .Account__content 
-          ・ニックネーム（必須）
+          %span・メールアドレス
+          %span.require（必須）
           = f.text_field :nickname, class: "name"
         .Account__content
           ・メールアドレス（必須）
