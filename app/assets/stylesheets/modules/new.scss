@@ -64,16 +64,7 @@
     line-height: 35px;
     margin: 0 auto 20px auto;
   }
-  .Account__signin {
-    position: relative;
-    display: block;
-    margin-left: 140px;
-    margin-bottom: 25px;
-    .radioname {
-      vertical-align: middle;
-      margin-left: 28px;
-    }
-  }
+  
   .Account__content-name  {
         max-width: 343px;
         margin: 0 auto;
@@ -84,13 +75,13 @@
         margin-bottom: 15px;
         margin-right: 10px;
       }
-      .fkana {
+      .lname {
         line-height: 35px;
       }
     }
     .Account__content-lname {
       display: flex;
-      .lname {
+      .fkana {
         line-height: 35px;
         margin-bottom: 15px;
         margin-right: 10px;
