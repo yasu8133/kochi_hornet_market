@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+  }
+  devise_scope :user do
+    get 'addresses', to: 'users/registrations#new_address'
+    post 'addresses', to: 'users/registrations#create_address'
+  end
+
   root 'items#index'
   
   # 出品機能実装のための仮置きです 堅田もしexhibitionコントローラを修正したなら削除して10行目のresourcesをexhibitionsにすること

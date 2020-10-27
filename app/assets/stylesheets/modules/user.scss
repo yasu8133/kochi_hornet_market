@@ -47,7 +47,7 @@
             font-size: 16px;
           }
           .login-submit.btn-default.btn-red {
-            margin: 24px 0 0;
+            margin: 24px auto 50px;
             background: #ea352d;
             border: 1px solid #ea352d;
             color: #fff;
@@ -58,12 +58,6 @@
             border-radius: 4px;
             cursor: pointer;
             text-align: center;
-          }
-          .misspassword {
-            display: block;
-            margin: 40px 0 0;
-            color: #0099e8;
-            text-decoration: none;
           }
         }
       }

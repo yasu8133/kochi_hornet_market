@@ -82,3 +82,8 @@ gem 'mini_magick'
 
 # 都道府県など、固定値を入れるためのGEM
 gem 'active_hash'
+
+#デバイスのエラーメッセージ日本語化
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+

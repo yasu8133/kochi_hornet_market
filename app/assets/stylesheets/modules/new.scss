@@ -24,114 +24,113 @@
       line-height: 1.5;
       text-align: center;
     }
-  }
-  .Account__inner {
-    padding: 24px 16px 40px;
-    border-top: 1px solid #f5f5f5;
-    padding: 40px;
-    font-size: 15px;
+    .Account__inner {
+      padding: 24px 16px 40px;
+      border-top: 1px solid #f5f5f5;
+      padding: 40px;
+      font-size: 15px;
       .Account__content {
         max-width: 343px;
         margin: 0 auto;
+     }
+     .require {
+      font-weight: bold;
+      color: #ffffff;
+      background-color: #3cceac;
+      border-radius: 2px;
+      margin-left: 8px;
+      // padding: 0 4px;
+     }
+      
+     .nickname {
+      position: relative;
+      display: block;
+      width: 100%;
+      line-height: 35px;
+      margin: 5px auto 20px auto;
+    }
+    .mail {
+      position: relative;
+      display: block;
+      width: 100%;
+      line-height: 35px;
+      margin: 5px auto 20px auto;
+    }
+    .pass {
+      position: relative;
+      display: block;
+      width: 100%;
+      line-height: 35px;
+      margin: 5px auto 20px auto;
+    } 
+    .Account__content  {
+          max-width: 343px;
+          margin: 0 auto;
+      .Account__content-name {
+        display: flex;
+        .fname {
+          margin-top: 5px;
+          line-height: 35px;
+          margin-bottom: 15px;
+          margin-right: 10px;
+        }
+        .lname {
+          margin-top: 5px;
+          line-height: 35px;
+          margin-bottom: 15px;
+          margin-right: 10px;
+        }
+      }
+      .Account__content-name-kana {
+        display: flex;
+        .fkana {
+          line-height: 35px;
+          margin-bottom: 15px;
+          margin-right: 10px;
+        }
+        .lkana {
+          line-height: 35px;
+          margin-bottom: 15px;
+          margin-right: 10px;
+        }
+      }
    }
-   .name {
-    position: relative;
-    display: block;
-    width: 100%;
-    line-height: 35px;
-    margin-bottom: 20px;
-  }
-  .mail {
-    position: relative;
-    display: block;
-    width: 100%;
-    line-height: 35px;
-    margin-bottom: 20px;
-  }
-  .pass {
-    position: relative;
-    display: block;
-    width: 100%;
-    line-height: 35px;
-    margin-bottom: 20px;
-  }
-  .Account__signin {
-    position: relative;
-    display: block;
-    margin-left: 140px;
-    margin-bottom: 25px;
-    .radioname {
-      vertical-align: middle;
-      margin-left: 28px;
-    }
-  }
-  .Account__content-name  {
-        max-width: 343px;
-        margin: 0 auto;
-    .Account__content-fname {
-      display: flex;
-      .fname {
-        line-height: 35px;
-        margin-bottom: 15px;
-        margin-right: 10px;
+    .Account__birth {
+      position: relative;
+      // display: flex;
+      max-width: 343px;
+      margin: 30px auto 0;
+      &__day{
+        margin-top:10px;
       }
-      .fkana {
-        line-height: 35px;
+      .field_with_errors {
+        margin: 5px auto;
       }
     }
-    .Account__content-lname {
-      display: flex;
-      .lname {
-        line-height: 35px;
-        margin-bottom: 15px;
-        margin-right: 10px;
-      }
-      .lkana {
-        line-height: 35px;
+    .Button-UserButton {
+      display: block;
+      margin: 30px auto 0;
+      line-height: 35px;
+      border-radius: 4px;
+      color: #fff;
+      background-color: #6ff0e5;
+      border: none;
+      width: 300px;
+      cursor: pointer;
+    }
+    .Account__form-group {
+      margin: 40px 0 0;
+      .info {
+        text-align: center;
+        line-height: 1.5;
+        color: #888;
       }
     }
- }
-  .Account__birth {
-    position: relative;
-    display: block;
-    max-width: 343px;
-    margin: 30px auto 0 auto;
+   }
   }
-  .year {
-    height: 35px;
-    margin-left: 138px;
   }
-  .month {
-    height: 35px;
-    margin-left: 10px;
-  }
-  .day {
-    height: 35px;
-    margin-left: 10px;
-  }
-  .Button-UserButton {
-    margin-left: 180px;
-    line-height: 35px;
-    margin-top: 30px;
-    border-radius: 4px;
-    color: #fff;
-    background-color: #6ff0e5;
-    border: none;
-    width: 300px;
-    cursor: pointer;
-  }
-  .Account__form-group {
-    margin: 40px 0 0;
-    .info {
-      margin: 0;
-      padding: 0;
-      line-height: 1.5;
-      color: #888;
-    }
-  }
- }
-}
-.footer-honet {
+  
+.single-footer {
     height: 220px;
     margin: 0 auto;
     right: 0;
