@@ -65,7 +65,7 @@
       商品の状態
       %span.require 必須
       -# = form_with model:@exhibitions, local:true do |f|
-      = f.select :goods_status, Exhibition.goods_statuses.keys, include_blank: true
+    = f.select :goods_status, Exhibition.goods_statuses.keys, include_blank: true, class: "goods_status"
 
   .shipping
     %h2.shippingTitle
@@ -107,9 +107,8 @@
       販売利益
 
   .productButton
-    = f.submit 'aaaaaa', {class: "abc"}
-    %label.goButton
-      = link_to '出品する', root_path
+    = f.submit '出品する', {class: "goButton"}
+
     %label.draftButton
       = link_to '下書きに保存', root_path
     %label.returnButton
