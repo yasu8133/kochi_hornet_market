@@ -1,5 +1,7 @@
-class ExhibitionController < ApplicationController
-  
+# こちらは出品動作確認後に削除 堅田
+
+class ExhibitionsController < ApplicationController
+
   def index
     @exhibitions = Exhibition.includes(:images).order('created_at DESC')
   end
