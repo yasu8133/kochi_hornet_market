@@ -1,3 +1,5 @@
+# こちらは出品動作確認後に削除 堅田
+
 class ExhibitionsController < ApplicationController
 
   def index
