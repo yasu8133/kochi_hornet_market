@@ -1,0 +1,134 @@
+.header
+  .Header__icon
+    = link_to '/', class: 'headerImg' do
+      = image_tag 'logo.png', width: '185px', height: '49px'
+
+= form_with model: @exhibition, local: true do |f| 
+  .upperMain
+    .main
+      %section.main__block
+        -# = form_with model:@exhibitions, local:true do |f|
+        .sell__block__form
+          .sell__block__form__upload
+            %h3.sell__block__form__upload__head
+              出品画像
+              %span.require 必須
+            %p.requireSub 最大10枚までアップロードできます
+            #image-box-1
+              .item-num-0#image-box__container
+                = f.fields_for :images do |i|
+                  .input-area
+                    = i.file_field :image, type: 'file', name: "item[images_attributes][][image_url]", value:"", style: "display:none", id:"img-file"
+                    %label.upperIcon{for: "img-file"}
+                      %i.fas.fa-camera
+                      .dragDropText ドラッグアンドドロップ
+                      %br またはクリックしてファイルをダウンロード
+
+  .title
+    .form-group__name
+      .form-group__name__sub
+        商品名
+        %span.require 必須
+        -# = form_with model:@exhibitions, local:true do |f|
+        = f.text_field :goods_name, class: "input", placeholder: "40文字まで"
+      .form-group__name__subText
+        商品の説明
+        %span.require 必須
+        -# = form_with model:@exhibitions, local:true do |f|
+        = f.text_area :goods_demonstrate, class: 'Form__inputContent', placeholder: '商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。'
+
+
+
+  .productInfo
+    %h2.detail
+      商品の詳細
+    %h2.category
+      カテゴリー
+      %span.require 必須
+      %select.categorySelect{:name => "budget_d"}
+        %option{:value => "0"} 選択してください
+        %option{:value => "1"} レディース
+        %option{:value => "2"} メンズ
+        %option{:value => "3"} ベビーキッズ
+        %option{:value => "5"} インテリア・住まい・小物
+        %option{:value => "6"} 本・音楽・ゲーム
+        %option{:value => "7"} そのほか
+
+
+    %h2.brand
+      ブランド
+      %span.brandInput 任意
+      -# = form_with model:@exhibitions, local:true do |f|
+    = f.text_field :keyword, class: "brandInputText", placeholder: "例）シャネル"
+
+    %h2.condition
+      商品の状態
+      %span.require 必須
+      -# = form_with model:@exhibitions, local:true do |f|
+      = f.select :goods_status, Exhibition.goods_statuses.keys, include_blank: true
+
+  .shipping
+    %h2.shippingTitle
+      配送について
+    %h2.charge
+      配送料の負担
+      %span.require 必須
+      -# = form_with model:@exhibitions, local:true do |f|
+    = f.select :shipping_charges, Exhibition.shipping_charges.keys, include_blank: true
+
+    %h2.area
+      発送元の地域
+      %span.require 必須
+      -# = form_with model:@exhibitions, local:true do |f|
+      = f.select :shipping_area, Prefecture.all.map { |pre| [pre.name, pre.id] }
+
+    %h2.day
+      発送までの日数
+      %span.require 必須
+      -# = form_with model:@exhibitions, local:true do |f|
+      = f.select :shipping_date, Exhibition.shipping_dates.keys, include_blank: true
+
+
+  .price
+    %h2.productTitle
+      価格（¥300〜999,999,999）
+    %h2.priceInput
+      販売価格
+      %span.require 必須
+      %span.yen ¥
+      -# = form_with model:@exhibitions, local:true do |f|
+      = f.number_field :price, class: "priceNumber", min: 0, max: 999999999, size:30
+
+
+    %h2.priceMargin
+      販売手数料(10%)
+
+    %h2.priceIncome
+      販売利益
+
+  .productButton
+    = f.submit 'aaaaaa', {class: "abc"}
+    %label.goButton
+      = link_to '出品する', root_path
+    %label.draftButton
+      = link_to '下書きに保存', root_path
+    %label.returnButton
+      = link_to 'もどる', root_path
+
+  .caution
+    %p.cautionText
+      禁止されている行為及び出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。また、出品をもちまして利用規約に同意したことになります。
+
+.footer
+  %ui.footerList
+    %li.privacy
+      プライバシーポリシー
+    %li.rule
+      FURIMA利用規約
+    %li.ruleSub
+      特定商取引に関する表記
+  .grayLogo
+    %span.image
+      = image_tag src="/assets/graylogo.png", size: "80x80"
+  %p.copy
+    © Furima, Inc.
