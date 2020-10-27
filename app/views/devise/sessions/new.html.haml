@@ -17,7 +17,7 @@
             %input.login-input-text.input-default{name: "password", placeholder: "パスワード", type: "password"}/
           .form-group
             %button.login-submit.btn-default.btn-red{type: "submit"} ログイン
-          %h2.misspassword
-            = link_to "パスワードをお忘れの方"
+          .misspassword
+            = link_to "パスワードをお忘れの方", class: "misspass" 
     %footer.single-footer
       = render 'layouts/footer'
