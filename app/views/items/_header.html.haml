@@ -17,7 +17,14 @@
         %li.leftlists__item
           = link_to "ブランド", "#", class: "bland"
       %ul.rightlists
-        %li.rightlists__item--login
-          = link_to "ログイン", "#", class: "login"
-        %li.rightlists__item--new
-          = link_to "新規会員登録", "#", class: "new"
+        - if user_signed_in?
+          %h2
+            マイページ
+            = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout"
+        - else
+          %li.rightlists__item--login
+            = link_to "ログイン", new_user_session_path, class: "login"
+          %li.rightlists__item--new
+            = link_to "新規会員登録",new_user_registration_path, class: "new"
+
+        
