@@ -2,40 +2,45 @@
   .AccountPage__header
     %h1
       = link_to image_tag 'logo.png', href: "#", class: 'logotag'
-= form_with model: @user, url: user_registration_path, local: true do |f|
   .AccountPage__main
     .AccountPage__container
       %h2 
         新規会員登録
       .Account__inner
-        .Account__content 
-          %span・ニックネーム
-          %span.require（必須）
-          = f.text_field :nickname, class: "nickname"
-        .Account__content
-          %span・メールアドレス
-          %span.require（必須）
-          = f.email_field :email, class: "mail"
-        .Account__content
-          %apan・パスワード 
-          %span.require（必須）
-          = f.password_field :password, class: "pass"
-        .Account__content
-          %span・お名前
-          %span.require（必須）
-          .Account__content-fname 
-            = f.text_field :family_name, class: "fname", placeholder: "例（山田"
-            = f.text_field :last_name, class: "lname", placeholder: "例（太郎"
-          .Account__content-lname
-            = f.text_field :kana_family_name , class:"fkana", placeholder: "例（ヤマダ"
-            = f.text_field :kana_last_name, class: "lkana", placeholder: "例（タロウ"
-        .Account__birth 
-          %p・生年月日（必須）
-          = raw sprintf(f.date_select(:birth, use_month_numbers: true, start_year: 1930, end_year: (Time.now.year - 18), default: Date.new(1989, 1, 1), date_separator: '%s'), '年 ', '月 ') + '日'
-        .actions
-          = f.submit "次へ", class: 'Button-UserButton'
-        .Account__form-group
-          %p.info
-            登録することで、利用規約とプライバシーポリシーに同意したものとみなされます。
-  %footer.footer-honet
+        = form_with model: @user, url: user_registration_path, local: true do |f|
+          = render "devise/shared/error_messages", resource: @user 
+          .Account__content 
+            %span・ニックネーム
+            %span.require（必須）
+            = f.text_field :nickname, class: "nickname"
+          .Account__content
+            %span・メールアドレス
+            %span.require（必須）
+            = f.email_field :email, class: "mail"
+          .Account__content
+            %apan・パスワード 
+            %span.require（必須）
+            = f.password_field :password, class: "pass"
+          .Account__content
+            %span・お名前
+            %span.require（必須）
+            .Account__content-name 
+              = f.text_field :family_name, class: "fname", placeholder: "例（山田"
+              = f.text_field :last_name, class: "lname", placeholder: "例（太郎"
+            .Account__content-name-kana
+              -# %span・お名前（カナ）
+              -# %span.require（必須）
+              = f.text_field :kana_family_name , class:"fkana", placeholder: "例（ヤマダ"
+              = f.text_field :kana_last_name, class: "lkana", placeholder: "例（タロウ"
+          .Account__birth 
+            %span・生年月日
+            %span.require（必須）
+            .Account__birth__day
+              = raw sprintf(f.date_select(:birth, use_month_numbers: true, start_year: 1930, end_year: (Time.now.year - 18), default: Date.new(1989, 1, 1), date_separator: '%s'), '年 ', '月 ') +'日'
+          .actions
+            = f.submit "次へ", class: 'Button-UserButton'
+          .Account__form-group
+            %p.info
+              登録することで、利用規約とプライバシーポリシーに同意したものとみなされます。
+  %footer.single-footer
     = render 'layouts/footer'

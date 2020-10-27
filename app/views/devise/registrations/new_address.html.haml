@@ -1,30 +1,43 @@
-%h2 住所情報登録
-= form_for @address do |f|
-  = render "devise/shared/error_messages", resource: @address
-  .field
-    = f.label :postal_code
-    %br/
-    = f.text_field :postal_code
-  .field
-    = f.label :prefectures
-    %br/
-    = f.text_field :prefectures
-  .field
-    = f.label :municipalities
-    %br/
-    = f.text_field :municipalities
-  .field
-    = f.label :address
-    %br/
-    = f.text_field :address
-  .field
-    = f.label :building
-    %br/
-    = f.text_field :building
-  .field
-    = f.label :phone_number
-    %br/
-    = f.text_field :phone_number
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.AccountPage
+  .AccountPage__header
+    %h1
+      = link_to image_tag 'logo.png', href: "#", class: 'logotag'
+  .AccountPage__main
+    .AccountPage__container
+      %h2 
+        住所情報登録
+      .Account__inner
+        = form_for @address do |f|
+          = render "devise/shared/error_messages", resource: @address
+          .Account__content 
+            = f.label :・郵便番号（７ケタ）
+            %span.require（必須）
+            %br/
+            = f.text_field :postal_code ,class: "nickname",autofocus: true, placeholder: "例）781-0801"
+          .Account__content 
+            = f.label :・都道府県
+            %span.require（必須）
+            %br/
+            = f.text_field :prefectures, class: "nickname", autofocus: true, placeholder: "例）高知県"
+          .Account__content
+            = f.label :・市町村
+            %span.require（必須）
+            %br/
+            = f.text_field :municipalities, class: "nickname", autofocus: true, placeholder: "例）高知市"
+          .Account__content
+            = f.label :・以降の住所
+            %span.require（必須）
+            %br/
+            = f.text_field :address, class: "nickname", autofocus: true, placeholder: "例）上町5丁目4-18"
+          .Account__content
+            = f.label :・ビル、マンション名など
+            %br/
+            = f.text_field :building, class: "nickname", autofocus: true, placeholder: "例）六本木ヒルズ1101"
+          .Account__content
+            = f.label :・電話番号
+            %br/
+            = f.text_field :phone_number, class: "nickname", autofocus: true,placeholder: "例）090-XXXX-XXXX"
+          .actions
+            = f.submit "登録", class: 'Button-UserButton'
+  %footer.single-footer
+    = render 'layouts/footer'

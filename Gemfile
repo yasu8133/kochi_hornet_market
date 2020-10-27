@@ -77,3 +77,6 @@ gem 'font-awesome-sass'
 # ActiveRecordモデルのレコードをツリー構造（階層）として編成することを可能にするGem
 gem 'ancestry'
 
+#デバイスのエラーメッセージ日本語化
+gem 'devise-i18n'
+gem 'devise-i18n-views'
