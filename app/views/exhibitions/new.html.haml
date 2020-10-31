@@ -2,6 +2,7 @@
   .Header__icon
     = link_to '/', class: 'headerImg' do
       = image_tag 'logo.png', width: '185px', height: '49px'
+          = render "devise/shared/error_messages", resource: @exhibition
 
 = form_with model: @exhibition, local: true do |f| 
   .upperMain
