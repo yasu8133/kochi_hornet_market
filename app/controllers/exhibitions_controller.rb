@@ -17,6 +17,7 @@ class ExhibitionsController < ApplicationController
     if @exhibition.save
       redirect_to root_path
     else
+      @exhibition.images.new
       render :new
     end
   end
