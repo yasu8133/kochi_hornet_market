@@ -14,7 +14,7 @@ class ExhibitionsController < ApplicationController
   def create
     @exhibition = Exhibition.new(exhibition_params)
     # メソッドの最後にsave！と感嘆符をつけることで、例外処理時にエラー文を表示する、通常ではnilとなる
-    if @exhibition.save!
+    if @exhibition.save
       redirect_to root_path
     else
       render :new
