@@ -1,25 +1,26 @@
 = render "header"
 
-%nav.categoryLists
-  %ul
-    %li
-      = link_to "FURIMA", "#", class: "list"
-    %li
-      = icon('fa', 'angle-right')
-    %li
-      = link_to "レディース", "#", class: "list"
-    %li
-      = icon('fa', 'angle-right')
-    %li
-      = link_to "トップス", "#", class: "list"
-    %li
-      = icon('fa', 'angle-right')
-    %li
-      = link_to "Tシャツ/カットソー(半袖/半袖なし)", "#", class: "list"
-    %li
-      = icon('fa', 'angle-right')
-    %li
-      %p テスト
+//パンクズ機能実装しない為
+//%nav.categoryLists
+//  %ul
+//    %li
+//      = link_to "FURIMA", "#", class: "list"
+//    %li
+//      = icon('fa', 'angle-right')
+//    %li
+//     = link_to "レディース", "#", class: "list"
+//    %li
+//      = icon('fa', 'angle-right')
+//    %li
+//      = link_to "トップス", "#", class: "list"
+//    %li
+//      = icon('fa', 'angle-right')
+//    %li
+//      = link_to "Tシャツ/カットソー(半袖/半袖なし)", "#", class: "list"
+//    %li
+//      = icon('fa', 'angle-right')
+//    %li
+//      %p テスト
 
 .Main
   .showMain
@@ -28,7 +29,7 @@
       .topContent
         .itemBox
           %h2.itemBox__name
-            テスト
+            = @exhibition.goods_name
           .itemBox__body
             %ul.items
               %li.item
@@ -38,20 +39,21 @@
                     = image_tag("icon-01.png", width: "140px", height: "87px", class: "itemImg2")
           .itemBox__price
             %span.yen
-              ¥10000
+              = @exhibition.price
             .itemBox__price--details
               %span
                 (税込)
               %span
-                送料込み
+                = @exhibition.shipping_charges
           .itemDetail
-            テストテストテストテスト
+            = @exhibition.goods_demonstrate
           .table
             %table.itemTable
               %tbody.itemChart
                 %tr
                   %th.name 出品者
-                  %td.detail あああああ
+                  %td.detail
+                    = @exhibition.user.name
                 %tr
                   %th.name カテゴリー
                   %td.detail
@@ -64,20 +66,21 @@
                   %th.name ブランド
                   %td.detail
                 %tr
-                  %th.name 商品サイズ
-                  %td.detail
-                %tr
                   %th.name 商品の状態
-                  %td.detail 新品/未使用
+                  %td.detail
+                    = @exhibition.goods_status
                 %tr
                   %th.name 配送料の負担
-                  %td.detail 送料込み(出品者負担)
+                  %td.detail
+                    = @exhibition.shipping_charges
                 %tr
                   %th.name 発送元の地域
-                  %td.detail 北海道
+                  %td.detail
+                    = @exhibition.shipping_area
                 %tr
                   %th.name 発送日の目安
-                  %td.detail 1~2日で発送
+                  %td.detail
+                    = @exhibition.shipping_date
           .optionBox
             %ul.optionBox__Btn
               %li.optionBox__Btn--detail
